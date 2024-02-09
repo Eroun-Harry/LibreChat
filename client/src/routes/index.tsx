@@ -4,6 +4,8 @@ import Chat from './Chat';
 import ChatRoute from './ChatRoute';
 import AssistantsRoute from './AssistantsRoute';
 import Search from './Search';
+import AdminRoot from './AdminRoot';
+import Users from '~/components/Admin/Users';
 import {
   Login,
   Registration,
@@ -12,6 +14,7 @@ import {
   ApiErrorWatcher,
 } from '~/components/Auth';
 import { AuthContextProvider } from '~/hooks/AuthContext';
+import { Dashboard } from '~/components/Admin';
 
 const AuthLayout = () => (
   <AuthContextProvider>
@@ -63,6 +66,25 @@ export const router = createBrowserRouter([
           {
             path: 'search/:query?',
             element: <Search />,
+          },
+        ],
+      },
+      {
+        path: 'admin/',
+        element: <AdminRoot />,
+        children: [
+          // {
+          //   index: true,
+          //   element: <Navigate to="dashboard" replace={true} />,
+          // },
+          // TODO: index route setting(Dashboard)
+          {
+            path: 'dashboard/',
+            element: <Dashboard />,
+          },
+          {
+            path: 'users/',
+            element: <Users />,
           },
         ],
       },

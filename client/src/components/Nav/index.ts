@@ -9,3 +9,5 @@ export { default as NavLinks } from './NavLinks';
 export { default as NewChat } from './NewChat';
 export { default as SearchBar } from './SearchBar';
 export { default as Settings } from './Settings';
+export { default as AdminNav } from './AdminNav';
+export { default as AdminMenu } from './AdminMenu';
