@@ -73,11 +73,10 @@ export const router = createBrowserRouter([
         path: 'admin/',
         element: <AdminRoot />,
         children: [
-          // {
-          //   index: true,
-          //   element: <Navigate to="dashboard" replace={true} />,
-          // },
-          // TODO: index route setting(Dashboard)
+          {
+            index: true,
+            element: <Navigate to="dashboard" replace={true} />,
+          },
           {
             path: 'dashboard/',
             element: <Dashboard />,
