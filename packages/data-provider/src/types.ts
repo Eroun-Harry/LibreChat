@@ -219,3 +219,7 @@ export type TRequestPasswordResetResponse = {
   link?: string;
   message?: string;
 };
+
+export type TAllUser = {
+  userList: TUser[];
+};

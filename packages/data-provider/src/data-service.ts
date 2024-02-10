@@ -237,3 +237,8 @@ export const listConversationsByQuery = (
     return request.get(endpoints.conversations(pageNumber));
   }
 };
+
+// Admin
+export function getAllUsers(): Promise<t.TAllUser> {
+  return request.get(endpoints.getAllusers());
+}

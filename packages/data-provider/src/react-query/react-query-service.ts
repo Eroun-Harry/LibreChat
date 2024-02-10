@@ -389,3 +389,15 @@ export const useGetStartupConfig = (): QueryObserverResult<t.TStartupConfig> => 
     },
   );
 };
+
+export const useGetAllUsersQuery = (
+  config?: UseQueryOptions<t.TAllUser>,
+): QueryObserverResult<t.TAllUser> => {
+  return useQuery<t.TAllUser>([QueryKeys.user], () => dataService.getAllUsers(), {
+    refetchOnWindowFocus: false,
+    refetchOnReconnect: false,
+    refetchOnMount: false,
+    retry: false,
+    ...config,
+  });
+};
