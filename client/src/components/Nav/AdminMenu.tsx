@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 
 export default function AdminMenu() {
   const menuItems = [
+    { name: '채팅 페이지', url: '/' },
     { name: '대시보드', url: 'dashboard' },
     { name: '사용자 관리', url: 'users' },
   ];
